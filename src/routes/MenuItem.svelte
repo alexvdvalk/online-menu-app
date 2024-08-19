@@ -47,10 +47,10 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2">
         {#each $page.data.allergens as allergen}
-        {@const label = ($page.data.allergens.find ((i:{id:string;label:string | null}) => allergen ===`allergen_${i.id}`))?.label}
+        {@const label = ($page.data.allergens.find ((i:{id:string;label:string | null}) => allergen ===`allergen_${i.id}`))}
           <div class="flex flex-row gap-2 sm:even:justify-end">
             <div class="font-bold">
-              {label || allergen}
+               {allergen?.label || i.id}
             </div>
             <div>
               {item[allergen] ? "Yes" : "No"}

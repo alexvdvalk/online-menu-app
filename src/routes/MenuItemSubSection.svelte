@@ -15,7 +15,7 @@
 </script>
 
 <button
-  class="bg-primary-200 flex justify-between p-2 w-full my-0.5 rounded"
+  class="bg-primary-600 flex justify-between p-2 w-full my-0.5 rounded"
   onclick={() => (expanded = !expanded)}
 >
   <h6 class="h6">{title}</h6>
