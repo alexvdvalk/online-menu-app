@@ -37,6 +37,8 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     rel="stylesheet"
   />
+  <title>Online Menu Website</title>
+  <meta name="description" content="Demonstration Directus pag" />
 </svelte:head>
 
 <!-- App Shell -->
