@@ -29,17 +29,25 @@
   </label>
   <div class="grid grid-cols-2 h-12">
     <button
-      class="w-full h-full text-left px-4"
+      class="w-full h-full flex flex-row items-center justify-between px-4"
       class:bg-primary-600={sortBy === "menu_section"}
-      onclick={() => updateSortBy("menu_section")}>Sort By Category</button
-    >
+      onclick={() => updateSortBy("menu_section")}
+      >Sort By Category
+
+      {#if sortBy === "menu_section"}
+        <span class="material-symbols-outlined"> check </span>
+      {/if}
+    </button>
     <button
-      class="w-full h-full text-left px-4"
+      class="w-full h-full flex flex-row items-center justify-between px-4"
       onclick={() => updateSortBy("calories")}
       class:bg-primary-600={sortBy === "calories"}
     >
-      Sort By Calorie Count</button
-    >
+      Sort By Calorie Count
+      {#if sortBy === "calories"}
+        <span class="material-symbols-outlined"> check </span>
+      {/if}
+    </button>
   </div>
 
   {#each data.sections as section (section.id)}

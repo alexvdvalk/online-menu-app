@@ -50,7 +50,7 @@
         {@const label = ($page.data.allergens.find ((i:{id:string;label:string | null}) => allergen ===`allergen_${i.id}`))}
           <div class="flex flex-row gap-2 sm:even:justify-end">
             <div class="font-bold">
-               {allergen?.label || i.id}
+               {allergen?.label}
             </div>
             <div>
               {item[allergen] ? "Yes" : "No"}
@@ -91,8 +91,4 @@
     {data.value}
   </div>
 </div>
-
 {/snippet}
-<!-- <pre>
-       {JSON.stringify(item, null, 2)}
-   </pre> -->
